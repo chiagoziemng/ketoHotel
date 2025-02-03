@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Rooms - Omar Hotel Booking Engine</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional: Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar and Navbar (optional, depending on layout) -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar (Optional) -->
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Manage Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Manage Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reports</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Manage Rooms</h1>
+                </div>
+
+                <!-- Add/Edit Room Form (Card) -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4>Add or Edit Room</h4>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="roomType" class="form-label">Room Type</label>
+                                <input type="text" class="form-control" id="roomType" placeholder="e.g., Deluxe Room">
+                            </div>
+                            <div class="mb-3">
+                                <label for="price" class="form-label">Price per Night</label>
+                                <input type="number" class="form-control" id="price" placeholder="e.g., 150">
+                            </div>
+                            <div class="mb-3">
+                                <label for="availability" class="form-label">Availability</label>
+                                <select class="form-select" id="availability">
+                                    <option selected>Available</option>
+                                    <option value="unavailable">Unavailable</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Room</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Room Listings Table -->
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Room Listings</h4>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Room Type</th>
+                                    <th>Price per Night</th>
+                                    <th>Availability</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Deluxe Room</td>
+                                    <td>$150</td>
+                                    <td>Available</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-sm">Edit</button>
+                                        <button class="btn btn-danger btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Standard Room</td>
+                                    <td>$100</td>
+                                    <td>Unavailable</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-sm">Edit</button>
+                                        <button class="btn btn-danger btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+                                <!-- Add more rows dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional: If using interactive elements like dropdowns or modals) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
